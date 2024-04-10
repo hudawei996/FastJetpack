@@ -35,4 +35,8 @@ I hope we can have a harmonious and friendly communication to build an open sour
 
 Translated with DeepL
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=ldlywt/FastJetpack&type=Date)](https://star-history.com/#ldlywt/FastJetpack&Date)
+
 
