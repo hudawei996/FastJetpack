@@ -4,11 +4,21 @@ plugins {
 }
 
 android {
-    compileSdk 32
+    compileSdk 34
 
     defaultConfig {
         minSdk 29
-        targetSdk 32
+        targetSdk 33
+
+        buildConfigField "Boolean", "DEBUG", "false"
+    }
+
+    buildTypes {
+        release {
+//            buildConfigField "Boolean", "IS_DEV", "false"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
     }
 
     compileOptions {
@@ -18,17 +28,18 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    namespace 'com.aisier.network'
 }
 
 dependencies {
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.5.0'
-    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.core:core-ktx:1.13.1'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
     api("io.github.jeremyliao:live-event-bus-x:1.8.0")
-    api("com.google.code.gson:gson:2.8.6")
-    api("com.squareup.okhttp3:okhttp:4.1.0")
+    api("com.google.code.gson:gson:2.10.1")
+    api("com.squareup.okhttp3:okhttp:4.12.0")
     api("com.squareup.retrofit2:retrofit:2.9.0")
     api("com.squareup.retrofit2:converter-gson:2.9.0")
-    api("com.squareup.okhttp3:logging-interceptor:4.9.0")
+    api("com.squareup.okhttp3:logging-interceptor:4.11.0")
 }
 

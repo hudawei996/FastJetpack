@@ -1,7 +1,7 @@
 ext {
 
     android = [
-            compileSdkVersion: 32,
+            compileSdkVersion: 34,
             targetSdkVersion : 32,
             minSdkVersion    : 21,
             versionName      : "1.1.0",
@@ -9,8 +9,8 @@ ext {
     ]
 
     version = [
-            lifecycleVersion: "2.4.0",
-            androidVersion  : "1.5.0",
+            lifecycleVersion: "2.8.4",
+            androidVersion  : "1.6.0",
     ]
 
     AndroidDepend = [
